@@ -58,7 +58,7 @@ function createCard(item) {
 
     // Tags
     const tagsContainer = document.createElement("div");
-    tagsContainer.classList.add("card-tags", "d-flex", "flex-wrap", "gap-2");
+    tagsContainer.classList.add("card-tags", "d-flex", "small", "flex-wrap", "gap-2");
     item.tags.forEach(tag => {
         const tagEl = document.createElement("span");
         tagEl.classList.add("tag", "badge", "bg-secondary", "rounded-pill");
