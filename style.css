@@ -1,0 +1,103 @@
+/* Header section styling */
+.header-section {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ff6f74;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.accent-bar {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6f74, #FFB087);
+    margin: 1rem auto 1.5rem;
+    border-radius: 2px;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+.hero-bio {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+}
+
+/* Filter styles */
+.filter-group {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.filter-group label {
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+
+.filter-group select {
+    min-width: 200px;
+}
+
+.search-group {
+    margin-left: auto;
+}
+
+/* Card category and subcategory alignment */
+.card-categories {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+/* Peachy color for primary actions */
+.btn-primary {
+    background-color: #ff6f74;
+    border-color: #ff8787;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #ff6f74;
+    border-color: #ff6f6f;
+}
+
+/* Custom peachy badge */
+.bg-primary {
+    background-color: #ff6f74 !important;
+}
+
+/* Ensure filters stay on one line */
+.filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+/* Responsive - allow wrapping on smaller screens */
+@media (max-width: 1200px) {
+    .filters {
+        flex-wrap: wrap;
+    }
+}

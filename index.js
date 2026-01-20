@@ -4,6 +4,19 @@ const subcategoryFilter = document.getElementById("subcategory-filter");
 const searchBtn = document.getElementById("search");
 const searchInput = document.getElementById("search-input");
 
+// Category to color mapping
+const categoryColorMap = {
+    "Consulting": "bg-danger",
+    "Project and program management": "bg-warning",
+    "Teaching and facilitation": "bg-success",
+    "Research and writing": "bg-info"
+};
+
+// Get color class for category
+function getCategoryColor(category) {
+    return categoryColorMap[category] || "bg-secondary";
+}
+
 // Create card element from data
 function createCard(item) {
     const card = document.createElement("div");
@@ -26,17 +39,18 @@ function createCard(item) {
     const body = document.createElement("div");
     body.classList.add("card-body");
 
+    // Category and Sub-category
+    const categories = document.createElement("div");
+    categories.classList.add("card-categories", "mb-2", "small");
+    const categoryColor = getCategoryColor(item.category);
+    categories.innerHTML = `<span class="category badge ${categoryColor}">${item.category}</span> <code class="sub-category">${item.subCategory}</code> <hr>`;
+    body.appendChild(categories);
+
     // Title
     const title = document.createElement("h5");
     title.classList.add("card-title", "mb-2");
     title.innerText = item.title;
     body.appendChild(title);
-
-    // Category and Sub-category
-    const categories = document.createElement("div");
-    categories.classList.add("card-categories", "mb-2", "small");
-    categories.innerHTML = `<span class="category text-white bg-info">${item.category}</span> <br> <code class="sub-category">${item.subCategory}</code> <hr>`;
-    body.appendChild(categories);
 
     // Role
     const role = document.createElement("p");
@@ -145,6 +159,8 @@ categoryFilter.addEventListener("change", () => {
 subcategoryFilter.addEventListener("change", applyFilters);
 
 searchBtn.addEventListener("click", applyFilters);
+
+searchInput.addEventListener("input", applyFilters);
 
 searchInput.addEventListener("keypress", (e) => {
     if (e.key === "Enter") {

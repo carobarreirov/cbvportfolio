@@ -9,14 +9,27 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>My Portfolio</h1>
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Carolina Barreiro Valdez | Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+    <div class="container-lg my-5">
+        <div class="header-section">
+            <h1 class="hero-title">Transformation EdTech Leader</h1>
+            <h2 class="hero-subtitle">Beautiful Patterns Director</h2>
+            <div class="accent-bar"></div>
+            <p class="hero-description">Leader who connects technology, people, and purpose to deliver meaningful change.</p>
+            <p class="hero-bio">With a career spanning consulting, innovation, and education, bringing a distinctive ability to translate complex systems into human-centred strategies that create measurable impact.</p>
+        </div>
         
         <!-- Filter Section -->
-        <div class="filters">
+        <div class="filters d-flex gap-2 mb-4 align-items-end flex-nowrap">
             <div class="filter-group">
-                <label>Category:</label>
-                <select id="category-filter">
+                <select class="form-select"id="category-filter">
                     <option value="all">All Categories</option>
                     <option value="consulting">Consulting</option>
                     <option value="project-and-program-management">Project and Program Management</option>
@@ -26,22 +39,22 @@
             </div>
 
             <div class="filter-group">
-                <label>Sub-category:</label>
-                <select id="subcategory-filter">
+                <select class="form-select"id="subcategory-filter">
                     <option value="all">All Sub-categories</option>
                 </select>
             </div>
 
-            <div class="filter-group">
-                <input type="text" id="search-input" placeholder="Search by title or highlight...">
-                <button id="search">Search</button>
+            <div class="filter-group search-group">
+                <input class="form-control" type="search" id="search-input" placeholder="Search by title..." style="min-width: 250px;">
             </div>
+            <button class="btn btn-primary" type="submit" id="search">Search</button>
         </div>
+        
 
         <!-- Catalog -->
-        <div id="catalog" class="catalog"></div>
-
+    <div id="catalog" class="catalog"></div>
     <script src="data.js"></script>
     <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
