@@ -1,60 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CBV Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/morph/bootstrap.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CBV | Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/morph/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Carolina Barreiro Valdez | Portfolio</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
-</nav>
+  </head>
+  <body class="bg-light text-dark">
+    <!-- Navigation -->
+    <nav
+      class="navbar navbar-expand-lg sticky-top bg-body border-bottom shadow-sm"
+      data-bs-theme="dark"
+    >
+      <div class="container-lg">
+        <a class="navbar-brand fw-bold" href="#"
+          ><i class="fas fa-briefcase me-2"></i> Carolina Barreiro Valdez |
+          Portfolio
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto gap-3">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://carobarreirov.github.io/cbvportfolio/"
+                target="_blank"
+                >Portfolio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="https://carobarreirov.github.io/"
+                target="_blank"
+                >Back Home</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <div class="container-lg my-5">
-        <div class="header-section">
-            <h1 class="hero-title">Transformation EdTech Leader</h1>
-            <h2 class="hero-subtitle">Beautiful Patterns Director</h2>
-            <div class="accent-bar"></div>
-            <p class="hero-description">Leader who connects technology, people, and purpose to deliver meaningful change.</p>
-            <p class="hero-bio">With a career spanning consulting, innovation, and education, bringing a distinctive ability to translate complex systems into human-centred strategies that create measurable impact.</p>
+      <div class="header-section">
+        <h1 class="hero-title">Transformation EdTech Leader</h1>
+        <h2 class="hero-subtitle">Beautiful Patterns Director</h2>
+        <div class="accent-bar"></div>
+        <p class="hero-description">
+          Leader who connects technology, people, and purpose to deliver
+          meaningful change.
+        </p>
+        <p class="hero-bio">
+          With a career spanning consulting, innovation, and education, bringing
+          a distinctive ability to translate complex systems into human-centred
+          strategies that create measurable impact.
+        </p>
+      </div>
+
+      <!-- Filter Section -->
+      <div class="filters d-flex gap-2 mb-4 align-items-end flex-nowrap">
+        <div class="filter-group">
+          <select class="form-select" id="category-filter">
+            <option value="all">All Categories</option>
+            <option value="consulting">Consulting</option>
+            <option value="project-and-program-management">
+              Project and Program Management
+            </option>
+            <option value="teaching-and-facilitation">
+              Teaching and Facilitation
+            </option>
+            <option value="research-and-writing">Research and Writing</option>
+          </select>
         </div>
-        
-        <!-- Filter Section -->
-        <div class="filters d-flex gap-2 mb-4 align-items-end flex-nowrap">
-            <div class="filter-group">
-                <select class="form-select"id="category-filter">
-                    <option value="all">All Categories</option>
-                    <option value="consulting">Consulting</option>
-                    <option value="project-and-program-management">Project and Program Management</option>
-                    <option value="teaching-and-facilitation">Teaching and Facilitation</option>
-                    <option value="research-and-writing">Research and Writing</option>
-                </select>
-            </div>
 
-            <div class="filter-group">
-                <select class="form-select"id="subcategory-filter">
-                    <option value="all">All Sub-categories</option>
-                </select>
-            </div>
-
-            <div class="filter-group search-group">
-                <input class="form-control" type="search" id="search-input" placeholder="Search by title..." style="min-width: 250px;">
-            </div>
-            <button class="btn btn-primary" type="submit" id="search">Search</button>
+        <div class="filter-group">
+          <select class="form-select" id="subcategory-filter">
+            <option value="all">All Sub-categories</option>
+          </select>
         </div>
-        
 
-        <!-- Catalog -->
-    <div id="catalog" class="catalog"></div>
+        <div class="filter-group search-group">
+          <input
+            class="form-control"
+            type="search"
+            id="search-input"
+            placeholder="Search by title..."
+            style="min-width: 250px"
+          />
+        </div>
+        <button class="btn btn-primary" type="submit" id="search">
+          Search
+        </button>
+      </div>
+
+      <!-- Catalog -->
+      <div id="catalog" class="catalog"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5" data-bs-theme="dark">
+      <div class="container-lg text-center">
+        <p class="mb-0">
+          &copy; 2026 Carolina Barreiro Valdez. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="data.js"></script>
     <script src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>

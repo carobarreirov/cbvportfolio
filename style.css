@@ -1,3 +1,13 @@
+:root {
+  --bs-primary: #b62b45;
+  --bs-secondary: #6c7f9f;
+  --bs-body-bg: #ffffff;
+  --bs-body-color: #1a1a1a;
+  --bs-border-color: #e0e0e0;
+  --bs-heading-color: #181718;
+  --bs-primary-color: var(--bs-primary);
+  --bs-secondary-color: var(--bs-secondary);
+}
 /* Header section styling */
 .header-section {
     margin-bottom: 2rem;
@@ -15,7 +25,7 @@
 .hero-subtitle {
     font-size: 1.5rem;
     font-weight: 500;
-    color: #ff6f74;
+    color: #ca3a54;
     margin-bottom: 1rem;
     letter-spacing: 0.5px;
 }
@@ -23,7 +33,7 @@
 .accent-bar {
     width: 80px;
     height: 4px;
-    background: linear-gradient(90deg, #ff6f74, #FFB087);
+    background: linear-gradient(90deg, #ca3a54, #eb90a0);
     margin: 1rem auto 1.5rem;
     border-radius: 2px;
 }
@@ -72,21 +82,30 @@
     gap: 0.5rem;
 }
 
-/* Peachy color for primary actions */
-.btn-primary {
-    background-color: #ff6f74;
-    border-color: #ff8787;
-    color: #fff;
+/* Explicit button color overrides - higher specificity */
+.btn.btn-outline-primary {
+  color: #fff !important;
+  border-color: #ca3a54 !important;
+  background-color: #ca3a54 !important;
 }
 
-.btn-primary:hover {
-    background-color: #ff6f74;
-    border-color: #ff6f6f;
+.btn.btn-outline-primary:hover,
+.btn.btn-outline-primary:focus {
+  color: #fff !important;
+  background-color: #eb90a0 !important;
+  border-color: #d4b0b7 !important;
 }
 
-/* Custom peachy badge */
-.bg-primary {
-    background-color: #ff6f74 !important;
+.btn.btn-primary {
+  background-color: #ca3a54 !important;
+  border-color: #ca3a54 !important;
+  color: #fff !important;
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary:focus {
+  background-color: #c87e8b !important;
+  border-color: #e1c7cc !important;
 }
 
 /* Ensure filters stay on one line */
@@ -100,4 +119,14 @@
     .filters {
         flex-wrap: wrap;
     }
+}
+
+/* Global text selection styling (pink background, white text) */
+::selection {
+  background: var(--bs-primary);
+  color: #fff;
+}
+::-moz-selection {
+  background: var(--bs-primary);
+  color: #fff;
 }
