@@ -27,11 +27,11 @@ function createCard(item) {
     card.classList.add("col-12", "col-md-6", "col-lg-4", "mb-4");
 
     const cardElement = document.createElement("div");
-    cardElement.classList.add("card", "bg-light", "border-light", "h-100");
+    cardElement.classList.add("card", "border-primary", "h-100");
 
     // Header with Year and Location
     const header = document.createElement("div");
-    header.classList.add("card-header", "bg-dark", "text-white", "small");
+    header.classList.add("card-header", "text-white", "bg-dark", "small");
     header.innerHTML = `<span class="year">${item.year}</span> • <span class="location">${item.location}</span>`;
     cardElement.appendChild(header);
 

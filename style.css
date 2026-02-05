@@ -7,6 +7,7 @@
   --bs-heading-color: #181718;
   --bs-primary-color: var(--bs-primary);
   --bs-secondary-color: var(--bs-secondary);
+  --background-color: #ca3a54 !important;
 }
 /* Header section styling */
 .header-section {
